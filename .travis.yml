@@ -1,0 +1,8 @@
+sudo: required
+services:
+  - docker
+before_install:
+  - docker build -t 15110086-nguyenducnam/react-app -f Dockerfile.dev .
+ 
+ script:
+  - docker run 15110086-nguyenducnam/react-app npm tét -- --coverage
